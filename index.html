@@ -8,7 +8,7 @@
         alert("歡迎來到我的主頁！");
         function isLoad() { 
             if(typeof(Storage)=="undefined"){
-                alert("Sorry!!Web Storage");        
+                alert("Sorry!!Web Storage can't use!");        
             }
             else{       
                 btn_save.addEventListener("click", saveToLocalStorage);
@@ -25,21 +25,27 @@
         $(document).ready(function(){
             $("#btn1").click(function(){
                 $("#Q1").fadeToggle();
+                $("#btn1").hide();
             });
             $("#btn2").click(function(){
                 $("#Q2").fadeToggle();
+                $("#btn2").hide();
             });
             $("#btn3").click(function(){
-                $("#Q3").fadeToggle();
+                $("#Q3").slideToggle();
+                $("#btn3").hide();
             });
             $("#btn4").click(function(){
                 $("#Q4").fadeToggle();
+                $("#btn4").hide();
             });
             $("#btn5").click(function(){
                 $("#Q5").fadeToggle();
+                $("#btn5").hide();
             });
             $("#btn6").click(function(){
-                $("#Q6").fadeToggle();
+                $("#Q6").slideToggle();
+                $("#btn6").hide();
             });
             $("#haha1").click(function(){
                 alert("快看題目!😠😠😠😠")
@@ -54,7 +60,7 @@
         body{
             color: black;
             margin: 0px,padding:0;
-            font-family:Consolas, Arial,sans-serif,黑軟正黑體;
+            font-family:Papyrus, Arial,sans-serif,黑軟正黑體;
         }
         a:link{color:black;}
         a:visited:{color: black border:0px;}
@@ -74,7 +80,7 @@
             background:gray;
         }
         button{
-            font-family:monospace;
+            font-family:monospace,微軟正黑體;
         }
     </style>
 </head>
@@ -84,16 +90,16 @@
     <div>
         <center>
             <header>
-                <img src="https://lh3.googleusercontent.com/proxy/DMd2oVvhgSh4J4a3cOA2diTzf4q68BHNiTTupuIdi6b-akp8ForeLBH8NDHtsP4RusQ7fC6YmJfsZE3V3Q8eoDlQfXrqhdYrtyCyffQ3fG2Ma9zt" weight="50" height="50" id ="haha1" style="float: left; "><h1 >UVA Problems <img src="https://lh3.googleusercontent.com/proxy/DMd2oVvhgSh4J4a3cOA2diTzf4q68BHNiTTupuIdi6b-akp8ForeLBH8NDHtsP4RusQ7fC6YmJfsZE3V3Q8eoDlQfXrqhdYrtyCyffQ3fG2Ma9zt" weight="50" height="50" id ="haha2" style="float: right;"></h1>
+                <img src="https://www.techapple.com/wp-content/uploads/2018/03/tenor_1.gif" weight="50" height="50" id ="haha1" style="float: left; "><h1 >UVA Problems <img src="https://o.aolcdn.com/images/dar/5845cadfecd996e0372f/527b7047de14763c8c96a676503aaaa7aef33371/aHR0cDovL28uYW9sY2RuLmNvbS9oc3Mvc3RvcmFnZS9taWRhcy9kZWIxMzA2ODVjNjIyMGUyNjkxODMwNGI2MTE5ZGM2MS8yMDE2ODgzNDQvNDg3MGZjZjJmODY0MDk3MTAwYmUwNjJlZTUzYzk5MTEuanBn" weight="50" height="50" id ="haha2" style="float: right;"></h1>
             </header>
         </center>
     </div>
-    請輸入名字:<input type="text" id="inputname" value=""><br/>
+    請輸入名字 : <input type="text" id="inputname" value=""><br/>
     <div id ="show_LocalStorage"></div><br/>
     <button id="btn_save">儲存</button>
     <button id="btn_load">點我!</button>
     <div >
-        <h3>這裡有兩題，請您練習看看唷!
+        <h3>這裡有兩題，請您練習看看唷!(上面的圖片可以點點看ㄛ!)
             <marquee direction="down" width="125" height="30" behavior="alternate">
               <marquee behavior="alternate">
                 φ(゜▽゜*)♪
@@ -154,7 +160,7 @@
     <button id="btn6">點我看程式碼</button>
     <br/>
     <div id="Q4" style="display: none">
-        題意： 給定一個T和兩個數字a與b，T是test cases且0≤a ≤b ≤100。可以求出[a,b]中所有奇數的總和嗎?
+        題意： 給定一個T和兩個數字a與b，T是test cases且0≤a≤b≤100。可以求出[a,b]中所有奇數的總和嗎?
     </div>
     <br/>
     <div id="Q5" style="display: none"> 
@@ -182,7 +188,11 @@
 <footer>離開前可以留下你的意見唷~</footer>
 <a id ="link" href="mailto:hank891008@gmail.com?subject=我的意見">意見回饋😮😮</a>
 <br>
-<a href="https://lh3.googleusercontent.com/proxy/DMd2oVvhgSh4J4a3cOA2diTzf4q68BHNiTTupuIdi6b-akp8ForeLBH8NDHtsP4RusQ7fC6YmJfsZE3V3Q8eoDlQfXrqhdYrtyCyffQ3fG2Ma9zt">資料來源</a>
+<a href="https://www.techapple.com/wp-content/uploads/2018/03/tenor_1.gif" target="_blank">圖片來源1</a>
+<a href="https://o.aolcdn.com/images/dar/5845cadfecd996e0372f/527b7047de14763c8c96a676503aaaa7aef33371/aHR0cDovL28uYW9sY2RuLmNvbS9oc3Mvc3RvcmFnZS9taWRhcy9kZWIxMzA2ODVjNjIyMGUyNjkxODMwNGI2MTE5ZGM2MS8yMDE2ODgzNDQvNDg3MGZjZjJmODY0MDk3MTAwYmUwNjJlZTUzYzk5MTEuanBn" target="_blank">圖片來源2</a>
+<a id="gotop" href="#" align="right" style="float: right;">
+    <span >⬆︎TOP</span>
+</a>
 <marquee onMouseOver="this.stop()" onMouseOut="this.start()" style="margin:0px;opacity:1;" scrollamount="10"  bgcolor="white" noshade width="100%">It Is Not Our Abilities That Show What We Truly Are, It Is Our Choices.</marquee>
 </body>
 </html>
